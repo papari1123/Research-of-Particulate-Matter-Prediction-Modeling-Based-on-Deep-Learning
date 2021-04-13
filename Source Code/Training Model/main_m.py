@@ -1,10 +1,3 @@
-"""
-버전 설명
-
-: main2는 time_predictor와 기타 2차 생성물질을 추가함.
-    //TODO feature 변경에 맞게 수정할 것.
-    
-"""
 
 from pandas import read_csv
 

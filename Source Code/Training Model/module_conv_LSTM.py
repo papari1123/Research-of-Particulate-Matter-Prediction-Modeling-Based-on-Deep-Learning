@@ -1,9 +1,3 @@
-"""
-버전 설명
-
-: LSTM, CNN 및 기타 비교 방법 통합전.
-
-"""
 from math import sqrt
 from numpy import split
 from numpy import array

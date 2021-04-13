@@ -244,71 +244,7 @@ def IDW(stations_map, stations_xy_hash_table, x_size, y_size, time, start_featur
                               
     return stations_map
    
-# 아래는 scale 버전 적용하려다 실패한거
-#def IDW_winddir(scaled_combine_map, stations_map, stations_xy_hash_table, x_size, y_size, time) :
-#       # 보간 적용 for 미세먼지농도
-#    for x in range (x_size)    :
-#               for y in range (y_size)    :
-#                print('Idw wind %d %d' % (x,y) )
-#                for data in range (int(len(stations_map)))    :
-#                       wind_intensity = scaled_combine_map[data,x,y,wind_col] 
-#                  # 아래는 IDW적용, 먼저 벡터값 계산
-#                       wind_cos_element = 0
-#                       wind_sin_element = 0
-#                       for ff in [wind_sin_col, wind_cos_col] :
-#                          r_up = 0
-#                          r_down = 0.000000001
-#                          for hash_index in range (len(stations_xy_hash_table)) :
-#                              x_ =  int(stations_xy_hash_table[hash_index][1])
-#                              y_ =  int(stations_xy_hash_table[hash_index][2])
-#                              distance_sq = ((x-x_)**2+(y-y_)**2)**2
-#                              add_var = stations_map[data,x_,y_,ff]
-#                              if(distance_sq>0 and add_var != nan_value) : 
-#                                  # 같은 cell이거나, 해당 더할 값이 이상하면 pass
-#                                     r_up += add_var/distance_sq # 분자
-#                                     r_down += 1/distance_sq # 분자  
-#                          if(ff==wind_cos_col): 
-#                              wind_cos_element =  r_up/r_down
-#                          else :
-#                              wind_sin_element =  r_up/r_down   
-#                          # 연산 끝, 에러 시 해당 timestep에서 모든 측정소 결과값이 없는 것임.  
-#                       r = (wind_sin_element**2 + wind_cos_element**2+0.00001)**0.5
-#                       ss = math.asin(wind_sin_element/r)
-#                       scaled_combine_map[data,x,y, wind_sin_col] = math.sin(ss)*wind_intensity
-#                       cc = math.acos(wind_cos_element/r)
-#                       scaled_combine_map[data,x,y, wind_cos_col] = math.cos(cc)*wind_intensity
-#    return stations_map
-#
-#
-#def IDW(scaled_combine_map,  stations_map, stations_xy_hash_table, x_size, y_size, time, start_feature, end_feature) :
-#       # 보간 적용 for 미세먼지농도
-#
-#    for x in range (x_size)    :
-#              for y in range (y_size)    :
-#                  print('IDW scaled %d %d' % (x,y) )       
-#                  for ff in range (start_feature, end_feature)    :
-#                    #if(ff != wind_col) : continue
-#                    if(ff == wind_sin_col or ff == wind_cos_col) : continue  # 바람 방향 거름  """"""
-#                    for data in range (int(len(stations_map)))    :
-#                          r_up = 0
-#                          r_down = 0.000000001
-#                          for hash_index in range (len(stations_xy_hash_table)) :
-#                              x_ =  int(stations_xy_hash_table[hash_index][1])
-#                              y_ =  int(stations_xy_hash_table[hash_index][2])
-#                              distance_sq = ((x-x_)**2+(y-scaled_y_)**2)**2
-#                              add_var = stations_map[data,x_,y_,ff]
-#                              if(distance_sq>0 and add_var != nan_value) : 
-#                                  # 같은 cell이거나, 해당 더할 값이 이상하면 pass
-#                                     r_up += add_var/distance_sq # 분자
-#                                     r_down += 1/distance_sq # 분자  
-#                          # 연산 끝, 에러 시 해당 timestep에서 모든 측정소 결과값이 없는 것임. 
-#                          if(r_down==0) : scaled_combine_map[data,x,y,ff] = 0
-#                          else :          scaled_combine_map[data,x,y,ff] =r_up/r_down
-#                              
-#    return scaled_combine_map
-     
     
-
 def mapping_real_for_weather(map_, stations_xy_hash_table, x_size, y_size, feature, time) :
 
     for station_index in range(len(stations_xy_hash_table)):

@@ -17,12 +17,7 @@ from sklearn.metrics import mean_squared_error
 import pandas as pd
 import numpy as np
 import math 
-"""
-@TODO
-: 
-1. 한글 인코딩 문제. (CSV로 저장하면 한글 꺠져서 나옴)
-2. 날씨 데이터의 30분간격 데이터 존재하여, 열 안 맞음.
-"""
+
 def grid(v1, v2) :   # Latitude, Longitude
     RE = 6371.00877 # 지구 반경(km) 
     GRID = 5.0 # 격자 간격(km) 

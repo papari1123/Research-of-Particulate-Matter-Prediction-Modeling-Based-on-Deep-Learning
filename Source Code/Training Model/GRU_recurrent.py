@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
-"""Convolutional-recurrent layers.
+
 """
+Created on Mon Sep 10 18:18:12 2018
+
+: Keras 지원 라이브러리에서 ConvLSTM을 ConvGRU로 변경함.
+
+"""
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function

@@ -2,7 +2,7 @@
 """
 Created on Mon Sep 10 18:18:12 2018
 
-@author: Jaxx
+@author: LEE SEONGGU
 """
 from math import sqrt
 from numpy import concatenate
