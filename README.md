@@ -14,7 +14,7 @@ Window, Linux
 #### IDE  
 Spyder 
 #### Framework & Library
-Pandas, Nummpy, Keras, Tensorflow
+Pandas, Numpy, Keras, Tensorflow
 <br/>
 
 ## 3.Work flow
