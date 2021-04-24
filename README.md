@@ -18,11 +18,13 @@ Pandas, Numpy, Keras, Tensorflow
 <br/>
 
 ## 3.Work flow
+ below pictures represent grid mapping of meteorological statons and pollution stations. <br/>
 <p align="center">
-
-
-<img src="image/System Flow.png" width=500 height=550 align="center">
+<img src="image/기상 측정소 분포.png" width=400 height=250> <img src="image/대기오염측정소.png" width=400 height=250> 
 </p> 
+ below pictures represent grid mapping of meteorological statons and pollution stations.
+<img src="image/System Flow.png" width=500 height=550 align="center">
+
 
 ## 4.Hyper parameter
 |Parameter|Value|
