@@ -78,22 +78,20 @@ if you want to know T,W,C input, please see 6.Model.
 
 ## 6.Model
 #### input part
- With the previous 24 hours of data, This model predicts the next r hours PM concentration in each region divided by an 8x10 grid in South Korea.  </br>
-- The terrain part (T) extracts features based on individual region-dependent characteristic data using domestic meteorological data and pollution data.  </br>
-- The Wind part (W) extracts features based on domestic PM diffusion by wind using domestic wind component data and PM data. </br>
-- The China part (C) extracts features based on external inflow using data related to China. </br>
-</br>
- Each separated input part extracts the primary feature using only the input variables related to the influencing factors. </br>
- The parentheses in the input parts represent the input dimensions. The T and W parts use the 4-D tensor data, including time and space dimensions (time-step, x coordinate in grid, y coordinate in grid, input feature). The C part uses the 3-D tensor data, including only the spatial dimension (x coordinate in grid, y coordinate in grid, input feature).</br>
- The parentheses in all layers represent the output dimension, and the last dimension is the number of filters in each layer. The square brackets in some layers that use the convolution operation represent the kernel size for the 2-D spatial axis.</br>
+- With **the previous 24 hours of data, This model predicts the next r hours PM concentration** in each region divided by an 8x10 grid in South Korea.  </br>
+  - The **terrain part (T)** extracts features based on individual region-dependent characteristic data **using domestic meteorological data and pollution data**.  </br>
+  - The **Wind part (W)** extracts features based on domestic PM diffusion by wind u**sing domestic wind component data and PM data.** </br>
+  - The **China part (C)** extracts features based on **external inflow using data related to China**. </br>
+- The parentheses in the input parts represent the input dimensions. **The T and W parts use the 4-D tensor data, including time and space dimensions** (time-step, x coordinate in grid, y coordinate in grid, input feature). **The C part uses the 3-D tensor data, including only the spatial dimension** (x coordinate in grid, y coordinate in grid, input feature).</br>
+- **The parentheses in all layers represent the output dimension**, and the last dimension is the number of filters in each layer. **The square brackets** in some layers that use the convolution operation **represent the kernel size** for the 2-D spatial axis.</br>
 
 <p align="center">
 <img src="image/모델.png" width= 450, height = 720></p>
 
 #### Why was this model designed like this?
-(1) It was designed with mutually exclusive features extracted at the lowest level through **partitioned three input to separately consider each influencing factor (i.e., region dependent factor, diffusion factor and external influent factor) in more detail**. <br/>
-(2) It used **the Convolutional Gate Recurrent Unit (ConvGRU) (which can analyze 3-D spatiotemporal information at the same time) to consider diffusion phenomena and reduce the high memory usage** and computational complexity of ConvLSTM. <br/>
-(3) It used a **locally connected layer, which can extract independent features on the specific receptive field more effectively than a convolutional layer for analyzing how external inflow of a PM affects individual regions** in more detail.<br/>
+1. It was designed with mutually exclusive features extracted at the lowest level through **partitioned three input to separately consider each influencing factor (i.e., region dependent factor, diffusion factor and external influent factor) in more detail**. <br/>
+2. It used **the Convolutional Gate Recurrent Unit (ConvGRU) (which can analyze 3-D spatiotemporal information at the same time) to consider diffusion phenomena and reduce the high memory usage** and computational complexity of ConvLSTM. <br/>
+3. It used a **locally connected layer, which can extract independent features on the specific receptive field more effectively than a convolutional layer for analyzing how external inflow of a PM affects individual regions** in more detail.<br/>
 <br/>
 
 ## 7.Code
