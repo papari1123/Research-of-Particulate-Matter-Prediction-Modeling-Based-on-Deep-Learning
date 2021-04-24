@@ -2,7 +2,7 @@
 
 ## 1.Summary
 1. predicted particulate matter(PM) of next N hour(N=1,4,12,24) in Korea.<br/>
-2. used Spatiotemporal Prediction method considering external pull factor such as wind and china PM.<br/>
+2. used spatiotemporal prediction method considering external pull factor such as wind and china PM.<br/>
 3. used CNN, convolutonal-GRU and locally connected layer.<br/>
 
 ## 2.Skill
@@ -14,12 +14,12 @@ Window, Linux
 Spyder 
 #### Framework & Library
 Pandas, Nummpy, Keras, Tensorflow
-</br>
+<br/>
 ## 3.Work flow
-<img src="image/System Flow.png" width=500, height=500>
-<br></br>
+<img src="image/System Flow.png" width=500, height=550>
+<br/>
 ## 4.Model
-<img src="image/모델.png" width= 500, height = 700>
+<img src="image/모델.png" width= 500, height = 720>
 
 ## 5.Code
 ### Pre-processing
