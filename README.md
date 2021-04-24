@@ -1,10 +1,10 @@
 # Research-of-Particulate-Matter-Prediction-Modeling-Based-on-Deep-Learning
 
 ## 1.Summary
-1. predicted particulate matter(PM) of next N hour(N=1,4,12,24) in Korea.</br>
-2. used Spatiotemporal Prediction method considering external pull factor such as wind and china PM.</br>
-3. used CNN, convolutonal-GRU and locally connected layer.</br>
-</br>
+1. predicted particulate matter(PM) of next N hour(N=1,4,12,24) in Korea.<br/>
+2. used Spatiotemporal Prediction method considering external pull factor such as wind and china PM.<br/>
+3. used CNN, convolutonal-GRU and locally connected layer.<br/>
+
 ## 2.Skill
 #### Language 
 Python
@@ -14,7 +14,7 @@ Window, Linux
 Spyder 
 #### Framework & Library
 Pandas, Nummpy, Keras, Tensorflow
-<br></br>
+</br>
 ## 3.Work flow
 <img src="image/System Flow.png" width=500, height=500>
 <br></br>
