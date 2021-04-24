@@ -20,8 +20,7 @@ Pandas, Numpy, Keras, Tensorflow
 ## 3.Work flow
 <p align="center">
 
-<img src="image/기상 측정소 분포.png" width=400 height=250> <img src="image/대기오염측정소.png" width=400 height=250> 
-<br/>
+
 <img src="image/System Flow.png" width=500 height=550 align="center">
 </p> 
 
