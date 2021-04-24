@@ -32,13 +32,13 @@ Pandas, Nummpy, Keras, Tensorflow
 ## 6.Result
 This is an prediction example of one area in Korea divided 8x10 grid. <br/>
 <p align="center">
-  next 1hour<br/>
+next 1hour<br/>
 <img src="image/R1.png"><br/>
-<center>next 4hour</center><br/>
+next 4hour<br/>
 <img src="image/R4.png"><br/>
-<center>next 12hour</center><br/>
+next 12hour<br/>
 <img src="image/R12.png"><br/>
-<center>next 24hour</center><br/>
+next 24hour<br/>
 <img src="image/R24.png"><br/>
 </p>
 
