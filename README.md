@@ -3,10 +3,7 @@
 ## 1.Summary
 - The goal of this study is **to develop a deep learning-based PM prediction model using China PM data, domestic meteorological data and domestic pollution data** to consider the environment in South Korea.  </br>
 - To do this, we propose a **Deep Particulate Matter Network** with a Separated Input model based on deep learning by **using ConvGRU, which can simultaneously analyze spatiotemporal information to consider the diffusion of particulate matter**.</br>
-- This study used three main noble method to increase prediction accuracy. <br/>
-(1) It designed the proposed model with mutually exclusive features extracted at the lowest level through **partitioned input to separately consider each influencing factor (i.e., region dependent factor, diffusion factor and external influent factor) in more detail**. <br/>
-(2) It used **the Convolutional Gate Recurrent Unit (ConvGRU) (which can analyze 3-D spatiotemporal information at the same time) to consider diffusion phenomena and reduce the high memory usage** and computational complexity of ConvLSTM. <br/>
-(3) It used a **locally connected layer, which can extract independent features on the specific receptive field more effectively than a convolutional layer for analyzing how external inflow of a PM affects individual regions** in more detail.<br/>
+- This study used three main novel method to increase prediction accuracy (see 6.model). <br/>
 - Experiments are designed **to predict the PM10 over the next N hour (N=1,4,12,24) with a spatial resolution of 8x10 grids over all regions in Korea**. The proposed Deep-learning model shows better prediction performance than the previous deep learning (LSTM, CNN+LSTM, ConvLSTM) based models .</br>
  
 ## 2.Skill
@@ -57,6 +54,7 @@ Pandas, Numpy, Keras, Tensorflow
 3. particulate matter in China : http://www.stateair.net/web/post/1/1.html
 
 #### model input data
+if you want to know T,W,C input, please see 6.Model.
 |#|Variable|Dimension (C input)|T input|W input|C input|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |0|PM10(μg/m3)|scalar(7)|O|O|O|
@@ -79,8 +77,24 @@ Pandas, Numpy, Keras, Tensorflow
 
 
 ## 6.Model
+#### input part
+ With the previous 24 hours of data, This model predicts the next r hours PM concentration in each region divided by an 8x10 grid in South Korea.  </br>
+- The terrain part (T) extracts features based on individual region-dependent characteristic data using domestic meteorological data and pollution data.  </br>
+- The Wind part (W) extracts features based on domestic PM diffusion by wind using domestic wind component data and PM data. </br>
+- The China part (C) extracts features based on external inflow using data related to China. </br>
+</br>
+ Each separated input part extracts the primary feature using only the input variables related to the influencing factors. </br>
+ The parentheses in the input parts represent the input dimensions. The T and W parts use the 4-D tensor data, including time and space dimensions (time-step, x coordinate in grid, y coordinate in grid, input feature). The C part uses the 3-D tensor data, including only the spatial dimension (x coordinate in grid, y coordinate in grid, input feature).</br>
+ The parentheses in all layers represent the output dimension, and the last dimension is the number of filters in each layer. The square brackets in some layers that use the convolution operation represent the kernel size for the 2-D spatial axis.</br>
+
 <p align="center">
 <img src="image/모델.png" width= 450, height = 720></p>
+
+#### Why was this model designed like this?
+(1) It was designed with mutually exclusive features extracted at the lowest level through **partitioned three input to separately consider each influencing factor (i.e., region dependent factor, diffusion factor and external influent factor) in more detail**. <br/>
+(2) It used **the Convolutional Gate Recurrent Unit (ConvGRU) (which can analyze 3-D spatiotemporal information at the same time) to consider diffusion phenomena and reduce the high memory usage** and computational complexity of ConvLSTM. <br/>
+(3) It used a **locally connected layer, which can extract independent features on the specific receptive field more effectively than a convolutional layer for analyzing how external inflow of a PM affects individual regions** in more detail.<br/>
+<br/>
 
 ## 7.Code
 ### Pre-processing
