@@ -1,10 +1,11 @@
 # Research-of-Particulate-Matter-Prediction-Modeling-Based-on-Deep-Learning
 
 ## 1.Summary
-1. This research predicted particulate matter(PM) of next N hour(N=1,4,12,24) in Korea.<br/>
-2. It used a spatiotemporal prediction method considering external pull factor such as wind and china PM.<br/>
-3. It used pollution data, meteorological data and china PM data for input.
-4. It used CNN, convolutonal-GRU and locally connected layer.<br/>
+- The goal of this study is **to develop a deep learning-based PM prediction model using China PM data, domestic meteorological data and domestic pollution data** to consider the environment in South Korea.  </br>
+- To do this, we propose a **Deep Particulate Matter Network** with a Separated Input model based on deep learning by **using ConvGRU, which can simultaneously analyze spatiotemporal information to consider the diffusion of particulate matter**.</br>
+- We further employ a locally-connected layer, which **can better extract features of individual fields to consider the inflow of pollution from China**. </br>
+- This model **separates the input into three parts**, including region-dependent factors, domestic PM diffusion factors and external inflow factors to understand PM generation in detail.</br> 
+- Experiments are designed **to predict the PM10 over the next 4 hours and 24 hours with a spatial resolution of 8x10 grids over all regions in Korea**. The proposed Deep-learning model shows better prediction performance than the previous deep learning based models.</br>
 
 ## 2.Skill
 #### Language 
@@ -20,11 +21,12 @@ Pandas, Numpy, Keras, Tensorflow
 ## 3.Work flow
  below pictures represent grid mapping of meteorological statons and pollution stations. <br/>
 <p align="center">
-<img src="image/기상 측정소 분포.png" width=400 height=250> <img src="image/대기오염측정소.png" width=400 height=250> 
-</p> 
- below pictures represent grid mapping of meteorological statons and pollution stations.
-<img src="image/System Flow.png" width=500 height=550 align="center">
-
+<img src="image/grid mapping.png" width=700 height=200> 
+ </p> 
+ All work-flow is below.
+ <p align="center">
+<img src="image/System Flow.png" width=500 height=550>
+ </p> 
 
 ## 4.Hyper parameter
 |Parameter|Value|
