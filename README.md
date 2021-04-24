@@ -54,7 +54,7 @@ Pandas, Numpy, Keras, Tensorflow
 3. particulate matter in China : http://www.stateair.net/web/post/1/1.html
 
 #### model input data
-if you want to know T,W,C input, please see 6.Model.
+If you want to know T,W,C input, please see 6.Model.
 |#|Variable|Dimension (C input)|T input|W input|C input|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |0|PM10(μg/m3)|scalar(7)|O|O|O|
