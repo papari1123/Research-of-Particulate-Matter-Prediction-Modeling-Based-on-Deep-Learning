@@ -44,29 +44,25 @@ Pandas, Nummpy, Keras, Tensorflow
 3. particulate matter in China : http://www.stateair.net/web/post/1/1.html
 
 #### model input data
-* X input : see 6.Model. 
-|#|Variable|Dimension|T input|W input|C input|
-|:---:|:---:||:---:|:---:||:---:|
-|0|PM10|scalar (7)|O|O|O|
-
-
-
-| 1  | SO2                     | scalar         | O        | -        | O        |
-| 2  | NO2                     | scalar         | O        | -        | O        |
-| 3  | 기온                      | scalar         | O        | -        | O        |
-| 4  | 풍속                      | scalar         | O        | O        | O        |
-| 5  | 상대습도                    | scalar         | O        | O        | O        |
-| 6  | 증기압                     | scalar         | O        | -        | O        |
-| 7  | 풍속_u성분                  | scalar (7)     | -        | O        | O        |
-| 8  | 풍속_v성분                  | scalar (7)     | -        | O        | O        |
-| 9  | 강수량                     | scalar         | O        | -        | O        |
-| 10 | 일교차                     | scalar         | O        | -        | O        |
-| 11 | 일최저기온                   | scalar         | O        | -        | O        |
-| 12 | Beijing PM2.5 [t-23,t]  | 24             | -        | -        | O        |
-| 13 | 계절                      | 4              | O        | -        | O        |
-| 14 | 시간대                     | 6              | O        | -        | O        |
-| 15 | X좌표                     | scalar         | O        | -        | O        |
-| 16 | Y좌표                     | scalar         | O        | -        | O        |
+|#|Variable|Dimension (C input)|T input|W input|C input|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|0|PM10(μg/m3)|scalar(7)|O|O|O|
+| 1  | SO2(ppm)                    | scalar         | O        | -        | O        |
+| 2  | NO2(ppm)                    | scalar         | O        | -        | O        |
+| 3  | Temperature(℃)                    | scalar         | O        | -        | O        |
+| 4  | Wind speed(m/s)                     | scalar         | O        | O        | O        |
+| 5  | Humidity(%)                 | scalar         | O        | O        | O        |
+| 6  | Air pressure(hPs)                     | scalar         | O        | -        | O        |
+| 7  | Wind_u factor(m/s)                  | scalar (7)     | -        | O        | O        |
+| 8  | Wind_v factor(m/s)                 | scalar (7)     | -        | O        | O        |
+| 9  | Precipitation(cm)                    | scalar         | O        | -        | O        |
+| 10 | Daily largest temperature difference(℃)                     | scalar         | O        | -        | O        |
+| 11 | Daily minimum temperatrue(℃)                  | scalar         | O        | -        | O        |
+| 12 | Beijing PM2.5(μg/m3)             | 24             | -        | -        | O        |
+| 13 | Season                      | 4              | O        | -        | O        |
+| 14 | hour                    | 6              | O        | -        | O        |
+| 15 | X axis in grid                    | scalar         | O        | -        | O        |
+| 16 | Y axis in grid                    | scalar         | O        | -        | O        |
 
 
 ## 6.Model
