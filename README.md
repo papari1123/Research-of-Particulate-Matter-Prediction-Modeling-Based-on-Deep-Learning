@@ -88,7 +88,7 @@ If you want to know T,W,C input, please see 6.Model.
 <p align="center">
 <img src="image/모델.png" width= 450, height = 720></p>
 
-#### Why was this model designed like this?
+#### model description
 1. It was designed with mutually exclusive features extracted at the lowest level through **partitioned three input to separately consider each influencing factor (i.e., region dependent factor, diffusion factor and external influent factor) in more detail**. <br/>
 2. It used **the Convolutional Gate Recurrent Unit (ConvGRU) (which can analyze 3-D spatiotemporal information at the same time) to consider diffusion phenomena and reduce the high memory usage** and computational complexity of ConvLSTM. <br/>
 3. It used a **locally connected layer, which can extract independent features on the specific receptive field more effectively than a convolutional layer for analyzing how external inflow of a PM affects individual regions** in more detail.<br/>
