@@ -26,11 +26,15 @@ Pandas, Nummpy, Keras, Tensorflow
 
 ## 5.Code
 ### Pre-processing
-
+(TBD)
 ### Training model
-
+(TBD)
 ## 6.Result
 This is an prediction example of one area in Korea divided 8x10 grid. <br/>
+- 1st subplot represent result of one year(2018).<br/>
+- 2nd subplot represent result of first month(2018.1).<br/>
+- 3rd subplot represent result of one month in middle of year.<br/>
+- last subplot represent result of last month(2018.12).<br/>
 <p align="center">
 next 1hour<br/>
 <img src="image/R1.png"><br/>
