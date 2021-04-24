@@ -1,10 +1,18 @@
 # Research-of-Particulate-Matter-Prediction-Modeling-Based-on-Deep-Learning
 
 ## 1.Summary
-1. This research predicted particulate matter(PM) of next N hour(N=1,4,12,24) in Korea.<br/>
-2. It used a spatiotemporal prediction method considering external pull factor such as wind and china PM.<br/>
-3. It used pollution data, meteorological data and china PM data for input.
-4. It used CNN, convolutonal-GRU and locally connected layer.<br/>
+ This study proposes the PM prediction modeling based on **deep learning by using ConvGRU which can simultaneously analyze spatiotemporal information, and using a locally-connected layer which can better extract features of individual fields.** 
+
+ Experiments were designed **to predict the PM10 of next 1, 4, 12 and 24 hours with the spatial resolution divided by the 8x10 grid of all regions in Korea.** In order to verify the performance of the proposed model, this study made five experimental hypotheses, which confirm that the proposed model is better than the other deep-learning based prediction model. 
+
+ In the result, the prediction performance got better when
+ 1) It analyzed **spatiotemporal information simultaneously.** 
+ 2) It had low computational complexity for short-term prediction; and it has high complexity for long-term prediction.
+ 3) It considered a intermediate process up to the next 1 hour to predict the next T-1 hour.
+ 4) It considered factors of PM diffusion in Korea.
+ 5) It considered factors of China PM. 
+  
+ So, the proposed model showed the better prediction performance than the previously studied models. Also, the result showed the delay shift phenomenon in the short-term prediction, and showed the moving average in the long-term prediction. So, the study can conclude that the prediction performance can be improved if those phenomenon are solved.
 
 ## 2.Skill
 #### Language 
