@@ -95,10 +95,7 @@ If you want to know T,W,C input, please see 6.Model.
 <br/>
 
 ## 7.Code
-### Pre-processing
-(TBD)
-### Training model
-(TBD)
+see, [source Code](https://github.com/papari1123/Research-of-Particulate-Matter-Prediction-Modeling-Based-on-Deep-Learning/tree/master/Source%20Code).
 ## 8.Result
 This is an prediction example of one area in Korea divided 8x10 grid. <br/>
 - top subplot represents a result of one year(2018).<br/>
