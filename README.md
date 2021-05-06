@@ -31,7 +31,7 @@ Pandas, Numpy, Keras, Tensorflow
  <p align="center">
 <img src="image/System Flow.png" width=500 height=550>
  </p> 
-- If you want to **know the data-processing and modeling seqeuence in detail, please see** [source Code](https://github.com/papari1123/Research-of-Particulate-Matter-Prediction-Modeling-Based-on-Deep-Learning/tree/master/Source%20Code). </br>
+- If you want to know the data-processing and modeling seqeuence in detail, please see [source Code](https://github.com/papari1123/Research-of-Particulate-Matter-Prediction-Modeling-Based-on-Deep-Learning/tree/master/Source%20Code). </br>
 
 ## 4.Hyper parameter
 |Parameter|Value|
