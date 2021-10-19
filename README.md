@@ -8,7 +8,7 @@
 - If you want to know **more information, please read** [my research paper](https://github.com/papari1123/Research-of-Particulate-Matter-Prediction-Modeling-Based-on-Deep-Learning/blob/master/Paper/%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EB%B0%98%20%EA%B5%AD%EB%82%B4%20%EB%AF%B8%EC%84%B8%EB%A8%BC%EC%A7%80%20%EC%98%88%EC%B8%A1%20%EB%AA%A8%EB%8D%B8%EB%A7%81%20%EC%97%B0%EA%B5%AC.pdf).</br>
 ## 2.Skill
 #### Language 
-Python
+Python 3.7
 #### OS 
 Window, Linux
 #### IDE  
